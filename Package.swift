@@ -25,5 +25,6 @@ let package = Package(
         .testTarget(
             name: "GithubSDKTests",
             dependencies: ["GithubSDK","Apollo"]),
-    ]
+    ],
+    exclude: ["Sources/GithubSDK/graphqls", "README.md", "schema.json", "proj_config.xcconfig", "pkg", "Demo", "apollo_gen.sh", "add-apollo-codegen-script.rb"]
 )
