@@ -86,10 +86,9 @@ public class GithubSDK: NSObject {
     }
     
     @discardableResult
-    public func userRepositories(first: Int = 10, after: String? = nil, complition: @escaping (_ repositories: [GHRepository]?,_ error: Error?)->()) -> Cancellable? {
+    public func userRepositories(first: Int = 10, after: String? = nil, firstProjects: Int = 0, firstIssues: Int = 0, firstPullRequests: Int = 0, complition: @escaping (_ repositories: [GHRepository]?,_ error: Error?)->()) -> Cancellable? {
         if let apollo = self.apollo {
-            let query = RepositoriesQuery(first: first, after: after)
-            
+            let query = RepositoriesQuery(first: first, after: after, firstProjects: firstProjects, firstIssues: firstIssues, firstPullRequests: firstPullRequests)
             return apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheData, queue: DispatchQueue.main) { (result, error) in
                 if let repositories = result?.data?.repositories.repositories {
                     var result = [GHRepository]()

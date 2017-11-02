@@ -6,7 +6,7 @@
 //
 import Foundation
 
-public class GHUser: NSObject {
+public class GHUser: GHObject {
     public fileprivate(set) var id: String
     public fileprivate(set) var login: String
     public fileprivate(set) var name: String?
@@ -40,17 +40,5 @@ public class GHUser: NSObject {
                   avatarUrl: avatarUrl,
                   location: userInfo.location
         )
-    }
-    
-    public override var description: String {
-        get {
-            var result = "\(self.classForCoder)\n"
-            Mirror(reflecting: self).children.forEach { (value) in
-                if let label = value.label {
-                    result += "\(label) - \(value.value)\n"
-                }
-            }
-            return result
-        }
     }
 }

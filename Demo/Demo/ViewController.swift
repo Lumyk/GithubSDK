@@ -32,13 +32,14 @@ class ViewController: UIViewController {
         self.sdk.usersInfo(complition: { (user, error) in
             print(user)
         })
-        self.sdk.userRepositories { (reposetiries, error) in
+        
+        self.sdk.userRepositories(first: 1, after: "Y3Vyc29yOnYyOpHOBiYSYg==", firstProjects: 3, firstIssues: 3, firstPullRequests: 3, complition: { (reposetiries, error) in
             if let reps = reposetiries {
                 reps.forEach({ (rep) in
                     print(rep)
                 })
             }
-        }
+        })
     }
 }
 

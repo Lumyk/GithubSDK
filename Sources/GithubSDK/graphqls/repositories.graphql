@@ -1,4 +1,4 @@
-query repositories($first: Int!, $after: String) {
+query repositories($first: Int!, $after: String, $firstProjects: Int!, $firstIssues: Int!, $firstPullRequests: Int!) {
   repositories: viewer {
     repositories(first: $first, after: $after) {
       totalCount
@@ -8,16 +8,48 @@ query repositories($first: Int!, $after: String) {
           name
           id
           url
-          projectsCount: projects {
+          projects: projects(first: $firstProjects) {
             totalCount
+            edges {
+              cursor
+              node {
+                id
+                name
+                columnsCount: columns {
+                  totalCount
+                }
+              }
+            }
           }
-          issuesCount: issues {
+          issuesOpened: issues(first: $firstIssues, states: OPEN) {
             totalCount
+            edges {
+              cursor
+              node {
+                id
+                title
+                createdAt
+                labelsCount: labels {
+                  totalCount
+                }
+              }
+            }
+          }
+          pullRequestsOpened: pullRequests(first: $firstPullRequests, states: OPEN) {
+            totalCount
+            edges {
+              cursor
+              node {
+                id
+                title
+                createdAt
+                labelsCount: labels {
+                  totalCount
+                }
+              }
+            }
           }
           labelsCount: labels {
-            totalCount
-          }
-          pullRequestsCount: pullRequests {
             totalCount
           }
         }

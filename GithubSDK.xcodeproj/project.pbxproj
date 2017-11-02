@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1509D0E81FAB98F700818D0C /* GHProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1509D0E61FAB97C800818D0C /* GHProject.swift */; };
+		1509D0EA1FAB9A0B00818D0C /* GHObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1509D0E91FAB9A0B00818D0C /* GHObject.swift */; };
+		1509D0EC1FAB9C4200818D0C /* GHIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1509D0EB1FAB9C4200818D0C /* GHIssue.swift */; };
+		1509D0EF1FABA65C00818D0C /* GHPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1509D0EE1FABA65C00818D0C /* GHPullRequest.swift */; };
 		OBJ_102 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ApolloClient.swift */; };
 		OBJ_103 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ApolloStore.swift */; };
 		OBJ_104 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* AsynchronousOperation.swift */; };
@@ -98,8 +102,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1509D0E61FAB97C800818D0C /* GHProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHProject.swift; sourceTree = "<group>"; };
+		1509D0E91FAB9A0B00818D0C /* GHObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHObject.swift; sourceTree = "<group>"; };
+		1509D0EB1FAB9C4200818D0C /* GHIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHIssue.swift; sourceTree = "<group>"; };
+		1509D0EE1FABA65C00818D0C /* GHPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHPullRequest.swift; sourceTree = "<group>"; };
 		"Apollo::Apollo::Product" /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GithubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GithubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GithubSDK::GithubSDKTests::Product" /* GithubSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GithubSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		OBJ_12 /* GHRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHRepository.swift; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 				OBJ_11 /* API.swift */,
 				OBJ_12 /* GHRepository.swift */,
 				OBJ_13 /* GHUser.swift */,
+				1509D0E61FAB97C800818D0C /* GHProject.swift */,
+				1509D0EB1FAB9C4200818D0C /* GHIssue.swift */,
+				1509D0EE1FABA65C00818D0C /* GHPullRequest.swift */,
+				1509D0E91FAB9A0B00818D0C /* GHObject.swift */,
 				OBJ_14 /* GithubSDK.swift */,
 				OBJ_15 /* Helpers */,
 			);
@@ -268,7 +280,7 @@
 			path = ".build/checkouts/apollo-ios.git--5909664044935035378/Sources/Apollo";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -279,7 +291,6 @@
 				OBJ_21 /* Dependencies */,
 				OBJ_57 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_57 /* Products */ = {
@@ -406,7 +417,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -506,7 +517,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				1509D0EC1FAB9C4200818D0C /* GHIssue.swift in Sources */,
+				1509D0E81FAB98F700818D0C /* GHProject.swift in Sources */,
 				OBJ_90 /* API.swift in Sources */,
+				1509D0EA1FAB9A0B00818D0C /* GHObject.swift in Sources */,
+				1509D0EF1FABA65C00818D0C /* GHPullRequest.swift in Sources */,
 				OBJ_91 /* GHRepository.swift in Sources */,
 				OBJ_92 /* GHUser.swift in Sources */,
 				OBJ_93 /* GithubSDK.swift in Sources */,
