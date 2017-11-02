@@ -11,7 +11,7 @@ let package = Package(
             name: "GithubSDK",
             targets: ["GithubSDK"]),
     ],
-    exclude: ["Sources/GithubSDK/graphqls", "README.md", "schema.json", "proj_config.xcconfig", "pkg", "Demo", "apollo_gen.sh", "add-apollo-codegen-script.rb"],
+    exclude: [],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
