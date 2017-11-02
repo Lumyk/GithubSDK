@@ -1,0 +1,12 @@
+query usersInfo {
+  user_info : viewer {
+    name
+    email
+    bio
+    avatarUrl
+    id
+    location
+    login
+    url
+  }
+}

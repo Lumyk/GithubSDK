@@ -1,0 +1,14 @@
+//
+//  proj_config.xcconfig
+//  GithubSDK
+//
+//  Created by Evgeny Kalashnikov on 02.11.2017.
+//
+
+// The base SDK to use (if no version is specified, the latest version is
+// assumed)
+SDKROOT = iphoneos
+
+// Supported device families (1 is iPhone, 2 is iPad)
+TARGETED_DEVICE_FAMILY = 1,2
+IPHONEOS_DEPLOYMENT_TARGET = 9.3

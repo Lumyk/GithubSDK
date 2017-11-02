@@ -1,0 +1,27 @@
+query repositories($first: Int!, $after: String) {
+  repositories: viewer {
+    repositories(first: $first, after: $after) {
+      totalCount
+      repositories: edges {
+        cursor
+        repository: node {
+          name
+          id
+          url
+          projectsCount: projects {
+            totalCount
+          }
+          issuesCount: issues {
+            totalCount
+          }
+          labelsCount: labels {
+            totalCount
+          }
+          pullRequestsCount: pullRequests {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}

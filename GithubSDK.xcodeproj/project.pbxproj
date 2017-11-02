@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"GithubSDK::GithubSDKPackageTests::ProductTarget" /* GithubSDKPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_136 /* Build configuration list for PBXAggregateTarget "GithubSDKPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_139 /* PBXTargetDependency */,
+			);
+			name = GithubSDKPackageTests;
+			productName = GithubSDKPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_102 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ApolloClient.swift */; };
+		OBJ_103 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ApolloStore.swift */; };
+		OBJ_104 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* AsynchronousOperation.swift */; };
+		OBJ_105 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Collections.swift */; };
+		OBJ_106 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* DataLoader.swift */; };
+		OBJ_107 /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* GraphQLDependencyTracker.swift */; };
+		OBJ_108 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* GraphQLError.swift */; };
+		OBJ_109 /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* GraphQLExecutor.swift */; };
+		OBJ_110 /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* GraphQLInputValue.swift */; };
+		OBJ_111 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* GraphQLOperation.swift */; };
+		OBJ_112 /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* GraphQLQueryWatcher.swift */; };
+		OBJ_113 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* GraphQLResponse.swift */; };
+		OBJ_114 /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* GraphQLResponseGenerator.swift */; };
+		OBJ_115 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* GraphQLResult.swift */; };
+		OBJ_116 /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* GraphQLResultAccumulator.swift */; };
+		OBJ_117 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* GraphQLResultNormalizer.swift */; };
+		OBJ_118 /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* GraphQLSelectionSet.swift */; };
+		OBJ_119 /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* GraphQLSelectionSetMapper.swift */; };
+		OBJ_120 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* HTTPNetworkTransport.swift */; };
+		OBJ_121 /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* InMemoryNormalizedCache.swift */; };
+		OBJ_122 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* JSON.swift */; };
+		OBJ_123 /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* JSONSerializationFormat.swift */; };
+		OBJ_124 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* JSONStandardTypeConversions.swift */; };
+		OBJ_125 /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Locking.swift */; };
+		OBJ_126 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* NetworkTransport.swift */; };
+		OBJ_127 /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* NormalizedCache.swift */; };
+		OBJ_128 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Promise.swift */; };
+		OBJ_129 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Record.swift */; };
+		OBJ_130 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* RecordSet.swift */; };
+		OBJ_131 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Result.swift */; };
+		OBJ_132 /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* ResultOrPromise.swift */; };
+		OBJ_133 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Utilities.swift */; };
+		OBJ_66 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_72 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Package.swift */; };
+		OBJ_78 /* GithubSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GithubSDKTests.swift */; };
+		OBJ_80 /* GithubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "GithubSDK::GithubSDK::Product" /* GithubSDK.framework */; };
+		OBJ_81 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Apollo::Apollo::Product" /* Apollo.framework */; };
+		OBJ_90 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* API.swift */; };
+		OBJ_91 /* GHRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* GHRepository.swift */; };
+		OBJ_92 /* GHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GHUser.swift */; };
+		OBJ_93 /* GithubSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GithubSDK.swift */; };
+		OBJ_94 /* URL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* URL+URLParameters.swift */; };
+		OBJ_96 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Apollo::Apollo::Product" /* Apollo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1509D0D61FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Apollo::Apollo";
+			remoteInfo = Apollo;
+		};
+		1509D0D71FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GithubSDK::GithubSDK";
+			remoteInfo = GithubSDK;
+		};
+		1509D0D81FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Apollo::Apollo";
+			remoteInfo = Apollo;
+		};
+		1509D0D91FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GithubSDK::GithubSDKTests";
+			remoteInfo = GithubSDKTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Apollo::Apollo::Product" /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GithubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GithubSDK::GithubSDKTests::Product" /* GithubSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GithubSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		OBJ_12 /* GHRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHRepository.swift; sourceTree = "<group>"; };
+		OBJ_13 /* GHUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUser.swift; sourceTree = "<group>"; };
+		OBJ_14 /* GithubSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSDK.swift; sourceTree = "<group>"; };
+		OBJ_16 /* URL+URLParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLParameters.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* GithubSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSDKTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demo; sourceTree = SOURCE_ROOT; };
+		OBJ_24 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloStore.swift; sourceTree = "<group>"; };
+		OBJ_26 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
+		OBJ_28 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		OBJ_29 /* GraphQLDependencyTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLDependencyTracker.swift; sourceTree = "<group>"; };
+		OBJ_30 /* GraphQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLError.swift; sourceTree = "<group>"; };
+		OBJ_31 /* GraphQLExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLExecutor.swift; sourceTree = "<group>"; };
+		OBJ_32 /* GraphQLInputValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLInputValue.swift; sourceTree = "<group>"; };
+		OBJ_33 /* GraphQLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOperation.swift; sourceTree = "<group>"; };
+		OBJ_34 /* GraphQLQueryWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLQueryWatcher.swift; sourceTree = "<group>"; };
+		OBJ_35 /* GraphQLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResponse.swift; sourceTree = "<group>"; };
+		OBJ_36 /* GraphQLResponseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResponseGenerator.swift; sourceTree = "<group>"; };
+		OBJ_37 /* GraphQLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResult.swift; sourceTree = "<group>"; };
+		OBJ_38 /* GraphQLResultAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResultAccumulator.swift; sourceTree = "<group>"; };
+		OBJ_39 /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
+		OBJ_40 /* GraphQLSelectionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLSelectionSet.swift; sourceTree = "<group>"; };
+		OBJ_41 /* GraphQLSelectionSetMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLSelectionSetMapper.swift; sourceTree = "<group>"; };
+		OBJ_42 /* HTTPNetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkTransport.swift; sourceTree = "<group>"; };
+		OBJ_43 /* InMemoryNormalizedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryNormalizedCache.swift; sourceTree = "<group>"; };
+		OBJ_44 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		OBJ_45 /* JSONSerializationFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializationFormat.swift; sourceTree = "<group>"; };
+		OBJ_46 /* JSONStandardTypeConversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStandardTypeConversions.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Locking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locking.swift; sourceTree = "<group>"; };
+		OBJ_48 /* NetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTransport.swift; sourceTree = "<group>"; };
+		OBJ_49 /* NormalizedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizedCache.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		OBJ_52 /* RecordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSet.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_54 /* ResultOrPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOrPromise.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/lumyk/ios/my_proj/GithubSDK/.build/checkouts/apollo-ios.git--5909664044935035378/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_8 /* proj_config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = proj_config.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_80 /* GithubSDK.framework in Frameworks */,
+				OBJ_81 /* Apollo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_96 /* Apollo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* GithubSDK */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* API.swift */,
+				OBJ_12 /* GHRepository.swift */,
+				OBJ_13 /* GHUser.swift */,
+				OBJ_14 /* GithubSDK.swift */,
+				OBJ_15 /* Helpers */,
+			);
+			name = GithubSDK;
+			path = Sources/GithubSDK;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_15 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* URL+URLParameters.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* GithubSDKTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* GithubSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* GithubSDKTests.swift */,
+			);
+			name = GithubSDKTests;
+			path = Tests/GithubSDKTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* Apollo 0.7.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_22 /* Apollo 0.7.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* Apollo */,
+				OBJ_56 /* Package.swift */,
+			);
+			name = "Apollo 0.7.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_23 /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* ApolloClient.swift */,
+				OBJ_25 /* ApolloStore.swift */,
+				OBJ_26 /* AsynchronousOperation.swift */,
+				OBJ_27 /* Collections.swift */,
+				OBJ_28 /* DataLoader.swift */,
+				OBJ_29 /* GraphQLDependencyTracker.swift */,
+				OBJ_30 /* GraphQLError.swift */,
+				OBJ_31 /* GraphQLExecutor.swift */,
+				OBJ_32 /* GraphQLInputValue.swift */,
+				OBJ_33 /* GraphQLOperation.swift */,
+				OBJ_34 /* GraphQLQueryWatcher.swift */,
+				OBJ_35 /* GraphQLResponse.swift */,
+				OBJ_36 /* GraphQLResponseGenerator.swift */,
+				OBJ_37 /* GraphQLResult.swift */,
+				OBJ_38 /* GraphQLResultAccumulator.swift */,
+				OBJ_39 /* GraphQLResultNormalizer.swift */,
+				OBJ_40 /* GraphQLSelectionSet.swift */,
+				OBJ_41 /* GraphQLSelectionSetMapper.swift */,
+				OBJ_42 /* HTTPNetworkTransport.swift */,
+				OBJ_43 /* InMemoryNormalizedCache.swift */,
+				OBJ_44 /* JSON.swift */,
+				OBJ_45 /* JSONSerializationFormat.swift */,
+				OBJ_46 /* JSONStandardTypeConversions.swift */,
+				OBJ_47 /* Locking.swift */,
+				OBJ_48 /* NetworkTransport.swift */,
+				OBJ_49 /* NormalizedCache.swift */,
+				OBJ_50 /* Promise.swift */,
+				OBJ_51 /* Record.swift */,
+				OBJ_52 /* RecordSet.swift */,
+				OBJ_53 /* Result.swift */,
+				OBJ_54 /* ResultOrPromise.swift */,
+				OBJ_55 /* Utilities.swift */,
+			);
+			name = Apollo;
+			path = ".build/checkouts/apollo-ios.git--5909664044935035378/Sources/Apollo";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Configs */,
+				OBJ_9 /* Sources */,
+				OBJ_17 /* Tests */,
+				OBJ_20 /* Demo */,
+				OBJ_21 /* Dependencies */,
+				OBJ_57 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"GithubSDK::GithubSDKTests::Product" /* GithubSDKTests.xctest */,
+				"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */,
+				"Apollo::Apollo::Product" /* Apollo.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_7 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* proj_config.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* GithubSDK */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Apollo::Apollo" /* Apollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_98 /* Build configuration list for PBXNativeTarget "Apollo" */;
+			buildPhases = (
+				OBJ_101 /* Sources */,
+				OBJ_134 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Apollo;
+			productName = Apollo;
+			productReference = "Apollo::Apollo::Product" /* Apollo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Apollo::SwiftPMPackageDescription" /* ApolloPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_68 /* Build configuration list for PBXNativeTarget "ApolloPackageDescription" */;
+			buildPhases = (
+				OBJ_71 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApolloPackageDescription;
+			productName = ApolloPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"GithubSDK::GithubSDK" /* GithubSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "GithubSDK" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+				OBJ_95 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_97 /* PBXTargetDependency */,
+			);
+			name = GithubSDK;
+			productName = GithubSDK;
+			productReference = "GithubSDK::GithubSDK::Product" /* GithubSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"GithubSDK::GithubSDKTests" /* GithubSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "GithubSDKTests" */;
+			buildPhases = (
+				OBJ_77 /* Sources */,
+				OBJ_79 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_82 /* PBXTargetDependency */,
+				OBJ_84 /* PBXTargetDependency */,
+			);
+			name = GithubSDKTests;
+			productName = GithubSDKTests;
+			productReference = "GithubSDK::GithubSDKTests::Product" /* GithubSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"GithubSDK::SwiftPMPackageDescription" /* GithubSDKPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXNativeTarget "GithubSDKPackageDescription" */;
+			buildPhases = (
+				OBJ_65 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GithubSDKPackageDescription;
+			productName = GithubSDKPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GithubSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"GithubSDK::SwiftPMPackageDescription" /* GithubSDKPackageDescription */,
+				"Apollo::SwiftPMPackageDescription" /* ApolloPackageDescription */,
+				"GithubSDK::GithubSDKTests" /* GithubSDKTests */,
+				"GithubSDK::GithubSDK" /* GithubSDK */,
+				"Apollo::Apollo" /* Apollo */,
+				"GithubSDK::GithubSDKPackageTests::ProductTarget" /* GithubSDKPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_102 /* ApolloClient.swift in Sources */,
+				OBJ_103 /* ApolloStore.swift in Sources */,
+				OBJ_104 /* AsynchronousOperation.swift in Sources */,
+				OBJ_105 /* Collections.swift in Sources */,
+				OBJ_106 /* DataLoader.swift in Sources */,
+				OBJ_107 /* GraphQLDependencyTracker.swift in Sources */,
+				OBJ_108 /* GraphQLError.swift in Sources */,
+				OBJ_109 /* GraphQLExecutor.swift in Sources */,
+				OBJ_110 /* GraphQLInputValue.swift in Sources */,
+				OBJ_111 /* GraphQLOperation.swift in Sources */,
+				OBJ_112 /* GraphQLQueryWatcher.swift in Sources */,
+				OBJ_113 /* GraphQLResponse.swift in Sources */,
+				OBJ_114 /* GraphQLResponseGenerator.swift in Sources */,
+				OBJ_115 /* GraphQLResult.swift in Sources */,
+				OBJ_116 /* GraphQLResultAccumulator.swift in Sources */,
+				OBJ_117 /* GraphQLResultNormalizer.swift in Sources */,
+				OBJ_118 /* GraphQLSelectionSet.swift in Sources */,
+				OBJ_119 /* GraphQLSelectionSetMapper.swift in Sources */,
+				OBJ_120 /* HTTPNetworkTransport.swift in Sources */,
+				OBJ_121 /* InMemoryNormalizedCache.swift in Sources */,
+				OBJ_122 /* JSON.swift in Sources */,
+				OBJ_123 /* JSONSerializationFormat.swift in Sources */,
+				OBJ_124 /* JSONStandardTypeConversions.swift in Sources */,
+				OBJ_125 /* Locking.swift in Sources */,
+				OBJ_126 /* NetworkTransport.swift in Sources */,
+				OBJ_127 /* NormalizedCache.swift in Sources */,
+				OBJ_128 /* Promise.swift in Sources */,
+				OBJ_129 /* Record.swift in Sources */,
+				OBJ_130 /* RecordSet.swift in Sources */,
+				OBJ_131 /* Result.swift in Sources */,
+				OBJ_132 /* ResultOrPromise.swift in Sources */,
+				OBJ_133 /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_66 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_72 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_78 /* GithubSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* API.swift in Sources */,
+				OBJ_91 /* GHRepository.swift in Sources */,
+				OBJ_92 /* GHUser.swift in Sources */,
+				OBJ_93 /* GithubSDK.swift in Sources */,
+				OBJ_94 /* URL+URLParameters.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_139 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GithubSDK::GithubSDKTests" /* GithubSDKTests */;
+			targetProxy = 1509D0D91FAB7C8400818D0C /* PBXContainerItemProxy */;
+		};
+		OBJ_82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GithubSDK::GithubSDK" /* GithubSDK */;
+			targetProxy = 1509D0D71FAB7C8400818D0C /* PBXContainerItemProxy */;
+		};
+		OBJ_84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Apollo::Apollo" /* Apollo */;
+			targetProxy = 1509D0D81FAB7C8400818D0C /* PBXContainerItemProxy */;
+		};
+		OBJ_97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Apollo::Apollo" /* Apollo */;
+			targetProxy = 1509D0D61FAB7C8400818D0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/Apollo_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Apollo;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Apollo;
+			};
+			name = Release;
+		};
+		OBJ_137 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/GithubSDKTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubSDKTests;
+			};
+			name = Debug;
+		};
+		OBJ_76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/GithubSDKTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubSDKTests;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/GithubSDK_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GithubSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubSDK;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/GithubSDK_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GithubSDK;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubSDK;
+			};
+			name = Release;
+		};
+		OBJ_99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* proj_config.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubSDK.xcodeproj/Apollo_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Apollo;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Apollo;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_136 /* Build configuration list for PBXAggregateTarget "GithubSDKPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_137 /* Debug */,
+				OBJ_138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "GithubSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_62 /* Build configuration list for PBXNativeTarget "GithubSDKPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_68 /* Build configuration list for PBXNativeTarget "ApolloPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_69 /* Debug */,
+				OBJ_70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_74 /* Build configuration list for PBXNativeTarget "GithubSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_75 /* Debug */,
+				OBJ_76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "GithubSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_98 /* Build configuration list for PBXNativeTarget "Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_99 /* Debug */,
+				OBJ_100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
