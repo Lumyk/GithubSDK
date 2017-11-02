@@ -67,28 +67,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1509D0D61FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+		1509D0E21FAB88EC00818D0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Apollo::Apollo";
 			remoteInfo = Apollo;
 		};
-		1509D0D71FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+		1509D0E31FAB88EC00818D0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "GithubSDK::GithubSDK";
 			remoteInfo = GithubSDK;
 		};
-		1509D0D81FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+		1509D0E41FAB88EC00818D0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Apollo::Apollo";
 			remoteInfo = Apollo;
 		};
-		1509D0D91FAB7C8400818D0C /* PBXContainerItemProxy */ = {
+		1509D0E51FAB88ED00818D0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -99,7 +99,7 @@
 
 /* Begin PBXFileReference section */
 		"Apollo::Apollo::Product" /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GithubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GithubSDK::GithubSDK::Product" /* GithubSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GithubSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GithubSDK::GithubSDKTests::Product" /* GithubSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GithubSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		OBJ_12 /* GHRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHRepository.swift; sourceTree = "<group>"; };
@@ -347,6 +347,7 @@
 			buildPhases = (
 				OBJ_89 /* Sources */,
 				OBJ_95 /* Frameworks */,
+				0823C41847B8FBC23143F950 /* Apollo codegen */,
 			);
 			buildRules = (
 			);
@@ -419,6 +420,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0823C41847B8FBC23143F950 /* Apollo codegen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo codegen";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_CODEGEN_PATH=\"$(eval find ${SRCROOT} -name \"check-and-run-apollo-codegen.sh\")\"\nif [ -z \"$APOLLO_CODEGEN_PATH\" ]; then\necho \"error: Couldn't find check-and-run-apollo-codegen.sh in APOLLO_CODEGEN_PATH; make sure that all is correct\"\nexit 1\nfi\ncd \"${SRCROOT}/Sources/${TARGET_NAME}\"\n\"${APOLLO_CODEGEN_PATH}\" generate $(find . -name '*.graphql') --schema ../../schema.json --output API.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_101 /* Sources */ = {
@@ -502,22 +520,22 @@
 		OBJ_139 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "GithubSDK::GithubSDKTests" /* GithubSDKTests */;
-			targetProxy = 1509D0D91FAB7C8400818D0C /* PBXContainerItemProxy */;
+			targetProxy = 1509D0E51FAB88ED00818D0C /* PBXContainerItemProxy */;
 		};
 		OBJ_82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "GithubSDK::GithubSDK" /* GithubSDK */;
-			targetProxy = 1509D0D71FAB7C8400818D0C /* PBXContainerItemProxy */;
+			targetProxy = 1509D0E31FAB88EC00818D0C /* PBXContainerItemProxy */;
 		};
 		OBJ_84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Apollo::Apollo" /* Apollo */;
-			targetProxy = 1509D0D81FAB7C8400818D0C /* PBXContainerItemProxy */;
+			targetProxy = 1509D0E41FAB88EC00818D0C /* PBXContainerItemProxy */;
 		};
 		OBJ_97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Apollo::Apollo" /* Apollo */;
-			targetProxy = 1509D0D61FAB7C8400818D0C /* PBXContainerItemProxy */;
+			targetProxy = 1509D0E21FAB88EC00818D0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

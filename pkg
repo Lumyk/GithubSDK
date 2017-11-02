@@ -6,12 +6,13 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 echo "Hello from ${YELLOW}Lumyk${NC} 🤖"
 
-if [ "$1" = "help" ] || [ "$1" = "?" ] ; then
+if [ "$1" = "help" ] || [ "$1" = "--help" ] || [ "$1" = "?" ] ; then
   echo "${RED}Get only one argument${NC}"
   echo "${GREEN}update or u${NC} — run package update"
   echo "${GREEN}gen or g${NC} — generate project file"
   echo "${GREEN}build or b${NC} — run swift build"
   echo "${GREEN}--clean or --c${NC} — run swift package clean"
+  echo "${GREEN}--apollo-codegen-script-add${NC} — add to project Run Script with apolo code generation (need 'xcodeproj' gem)"
 elif [ "$1" = "update" ] || [ "$1" = "u" ] ; then
   echo "${GREEN}Package update${NC}"
   swift package update
@@ -29,4 +30,8 @@ else
   swift package update
   swift build
   swift package generate-xcodeproj --xcconfig-overrides proj_config.xcconfig
+  if [ "$1" = "--apollo-codegen-script-add" ] ; then
+    echo "${GREEN}Add Run Script${NC}"
+    ruby add-apollo-codegen-script.rb
+  fi
 fi
