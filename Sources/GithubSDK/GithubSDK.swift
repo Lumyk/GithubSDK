@@ -90,11 +90,11 @@ public class GithubSDK: NSObject {
         if let apollo = self.apollo {
             let query = RepositoriesQuery(first: first, after: after, firstProjects: firstProjects, firstIssues: firstIssues, firstPullRequests: firstPullRequests)
             return apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheData, queue: DispatchQueue.main) { (result, error) in
-                if let repositories = result?.data?.repositories.repositories {
+                if let repositories = result?.data?.user.repositories {
                     var result = [GHRepository]()
                     let totalCount = repositories.totalCount
-                    repositories.repositories?.forEach({ (repository) in
-                        if let repository = repository, let r = GHRepository(repository: repository, totalCount: totalCount) {
+                    repositories.edges?.forEach({ (edge) in
+                        if let edge = edge, let r = GHRepository(repository: edge, totalCount: totalCount) {
                             result.append(r)
                         }
                     })

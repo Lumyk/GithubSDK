@@ -24,7 +24,7 @@ public class GHProject: GHObject {
         super.init()
     }
     
-    convenience init?(project: RepositoriesQuery.Data.Repository.Repository.Repository.Repository.Project.Edge, totalCount: Int) {
+    convenience init?(project: RepositoriesQuery.Data.User.Repository.Edge.Node.Project.Edge, totalCount: Int) {
         if let node = project.node {
             self.init(cursor: project.cursor,
                       id: node.id,

@@ -24,7 +24,7 @@ public class GHPullRequest: GHObject {
         super.init()
     }
     
-    convenience init?(pullRequest: RepositoriesQuery.Data.Repository.Repository.Repository.Repository.PullRequestsOpened.Edge, totalCount: Int) {
+    convenience init?(pullRequest: RepositoriesQuery.Data.User.Repository.Edge.Node.PullRequestsOpened.Edge, totalCount: Int) {
         if let node = pullRequest.node {
             let createdAtDate = GHObject.date(from: node.createdAt)
             self.init(cursor: pullRequest.cursor,

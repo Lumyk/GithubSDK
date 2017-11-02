@@ -4,7 +4,7 @@ import Apollo
 
 public final class RepositoriesQuery: GraphQLQuery {
   public static let operationString =
-    "query repositories($first: Int!, $after: String, $firstProjects: Int!, $firstIssues: Int!, $firstPullRequests: Int!) {\n  repositories: viewer {\n    __typename\n    repositories(first: $first, after: $after) {\n      __typename\n      totalCount\n      repositories: edges {\n        __typename\n        cursor\n        repository: node {\n          __typename\n          name\n          id\n          url\n          projects: projects(first: $firstProjects) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                name\n                columnsCount: columns {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          issuesOpened: issues(first: $firstIssues, states: OPEN) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                title\n                createdAt\n                labelsCount: labels {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          pullRequestsOpened: pullRequests(first: $firstPullRequests, states: OPEN) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                title\n                createdAt\n                labelsCount: labels {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          labelsCount: labels {\n            __typename\n            totalCount\n          }\n        }\n      }\n    }\n  }\n}"
+    "query repositories($first: Int!, $after: String, $firstProjects: Int!, $firstIssues: Int!, $firstPullRequests: Int!) {\n  user: viewer {\n    __typename\n    repositories: repositories(first: $first, after: $after) {\n      __typename\n      totalCount\n      edges {\n        __typename\n        cursor\n        node {\n          __typename\n          name\n          id\n          url\n          projects: projects(first: $firstProjects) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                name\n                columnsCount: columns {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          issuesOpened: issues(first: $firstIssues, states: OPEN) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                title\n                createdAt\n                labelsCount: labels {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          pullRequestsOpened: pullRequests(first: $firstPullRequests, states: OPEN) {\n            __typename\n            totalCount\n            edges {\n              __typename\n              cursor\n              node {\n                __typename\n                id\n                title\n                createdAt\n                labelsCount: labels {\n                  __typename\n                  totalCount\n                }\n              }\n            }\n          }\n          labelsCount: labels {\n            __typename\n            totalCount\n          }\n        }\n      }\n    }\n  }\n}"
 
   public var first: Int
   public var after: String?
@@ -28,7 +28,7 @@ public final class RepositoriesQuery: GraphQLQuery {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("viewer", alias: "repositories", type: .nonNull(.object(Repository.selections))),
+      GraphQLField("viewer", alias: "user", type: .nonNull(.object(User.selections))),
     ]
 
     public var snapshot: Snapshot
@@ -37,26 +37,26 @@ public final class RepositoriesQuery: GraphQLQuery {
       self.snapshot = snapshot
     }
 
-    public init(repositories: Repository) {
-      self.init(snapshot: ["__typename": "Query", "repositories": repositories.snapshot])
+    public init(user: User) {
+      self.init(snapshot: ["__typename": "Query", "user": user.snapshot])
     }
 
     /// The currently authenticated user.
-    public var repositories: Repository {
+    public var user: User {
       get {
-        return Repository(snapshot: snapshot["repositories"]! as! Snapshot)
+        return User(snapshot: snapshot["user"]! as! Snapshot)
       }
       set {
-        snapshot.updateValue(newValue.snapshot, forKey: "repositories")
+        snapshot.updateValue(newValue.snapshot, forKey: "user")
       }
     }
 
-    public struct Repository: GraphQLSelectionSet {
+    public struct User: GraphQLSelectionSet {
       public static let possibleTypes = ["User"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("repositories", arguments: ["first": GraphQLVariable("first"), "after": GraphQLVariable("after")], type: .nonNull(.object(Repository.selections))),
+        GraphQLField("repositories", alias: "repositories", arguments: ["first": GraphQLVariable("first"), "after": GraphQLVariable("after")], type: .nonNull(.object(Repository.selections))),
       ]
 
       public var snapshot: Snapshot
@@ -94,7 +94,7 @@ public final class RepositoriesQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("totalCount", type: .nonNull(.scalar(Int.self))),
-          GraphQLField("edges", alias: "repositories", type: .list(.object(Repository.selections))),
+          GraphQLField("edges", type: .list(.object(Edge.selections))),
         ]
 
         public var snapshot: Snapshot
@@ -103,8 +103,8 @@ public final class RepositoriesQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(totalCount: Int, repositories: [Repository?]? = nil) {
-          self.init(snapshot: ["__typename": "RepositoryConnection", "totalCount": totalCount, "repositories": repositories.flatMap { $0.map { $0.flatMap { $0.snapshot } } }])
+        public init(totalCount: Int, edges: [Edge?]? = nil) {
+          self.init(snapshot: ["__typename": "RepositoryConnection", "totalCount": totalCount, "edges": edges.flatMap { $0.map { $0.flatMap { $0.snapshot } } }])
         }
 
         public var __typename: String {
@@ -127,22 +127,22 @@ public final class RepositoriesQuery: GraphQLQuery {
         }
 
         /// A list of edges.
-        public var repositories: [Repository?]? {
+        public var edges: [Edge?]? {
           get {
-            return (snapshot["repositories"] as? [Snapshot?]).flatMap { $0.map { $0.flatMap { Repository(snapshot: $0) } } }
+            return (snapshot["edges"] as? [Snapshot?]).flatMap { $0.map { $0.flatMap { Edge(snapshot: $0) } } }
           }
           set {
-            snapshot.updateValue(newValue.flatMap { $0.map { $0.flatMap { $0.snapshot } } }, forKey: "repositories")
+            snapshot.updateValue(newValue.flatMap { $0.map { $0.flatMap { $0.snapshot } } }, forKey: "edges")
           }
         }
 
-        public struct Repository: GraphQLSelectionSet {
+        public struct Edge: GraphQLSelectionSet {
           public static let possibleTypes = ["RepositoryEdge"]
 
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("cursor", type: .nonNull(.scalar(String.self))),
-            GraphQLField("node", alias: "repository", type: .object(Repository.selections)),
+            GraphQLField("node", type: .object(Node.selections)),
           ]
 
           public var snapshot: Snapshot
@@ -151,8 +151,8 @@ public final class RepositoriesQuery: GraphQLQuery {
             self.snapshot = snapshot
           }
 
-          public init(cursor: String, repository: Repository? = nil) {
-            self.init(snapshot: ["__typename": "RepositoryEdge", "cursor": cursor, "repository": repository.flatMap { $0.snapshot }])
+          public init(cursor: String, node: Node? = nil) {
+            self.init(snapshot: ["__typename": "RepositoryEdge", "cursor": cursor, "node": node.flatMap { $0.snapshot }])
           }
 
           public var __typename: String {
@@ -175,16 +175,16 @@ public final class RepositoriesQuery: GraphQLQuery {
           }
 
           /// The item at the end of the edge.
-          public var repository: Repository? {
+          public var node: Node? {
             get {
-              return (snapshot["repository"] as? Snapshot).flatMap { Repository(snapshot: $0) }
+              return (snapshot["node"] as? Snapshot).flatMap { Node(snapshot: $0) }
             }
             set {
-              snapshot.updateValue(newValue?.snapshot, forKey: "repository")
+              snapshot.updateValue(newValue?.snapshot, forKey: "node")
             }
           }
 
-          public struct Repository: GraphQLSelectionSet {
+          public struct Node: GraphQLSelectionSet {
             public static let possibleTypes = ["Repository"]
 
             public static let selections: [GraphQLSelection] = [

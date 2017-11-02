@@ -38,29 +38,29 @@ public class GHRepository: GHObject {
         super.init()
     }
     
-    convenience init?(repository: RepositoriesQuery.Data.Repository.Repository.Repository, totalCount: Int) {
-        if let rep = repository.repository {
-            let url = URL(string: rep.url)
+    convenience init?(repository: RepositoriesQuery.Data.User.Repository.Edge, totalCount: Int) {
+        if let node = repository.node {
+            let url = URL(string: node.url)
             
             var projects : [GHProject]?
-            rep.projects.edges?.forEach({ (edge) in
-                if let edge = edge, let project = GHProject(project: edge, totalCount: rep.projects.totalCount) {
+            node.projects.edges?.forEach({ (edge) in
+                if let edge = edge, let project = GHProject(project: edge, totalCount: node.projects.totalCount) {
                     projects = projects ?? []
                     projects?.append(project)
                 }
             })
             
             var issues : [GHIssue]?
-            rep.issuesOpened.edges?.forEach({ (edge) in
-                if let edge = edge, let issue = GHIssue(issue: edge, totalCount:  rep.issuesOpened.totalCount) {
+            node.issuesOpened.edges?.forEach({ (edge) in
+                if let edge = edge, let issue = GHIssue(issue: edge, totalCount:  node.issuesOpened.totalCount) {
                     issues = issues ?? []
                     issues?.append(issue)
                 }
             })
             
             var pullRequests: [GHPullRequest]?
-            rep.pullRequestsOpened.edges?.forEach({ (edge) in
-                if let edge = edge, let pullRequest = GHPullRequest(pullRequest: edge, totalCount:  rep.issuesOpened.totalCount) {
+            node.pullRequestsOpened.edges?.forEach({ (edge) in
+                if let edge = edge, let pullRequest = GHPullRequest(pullRequest: edge, totalCount:  node.issuesOpened.totalCount) {
                     pullRequests = pullRequests ?? []
                     pullRequests?.append(pullRequest)
                 }
@@ -68,12 +68,12 @@ public class GHRepository: GHObject {
             
             self.init(totalCount: totalCount,
                       cursor: repository.cursor,
-                      id: rep.id,
-                      name: rep.name,
-                      projectsCount: rep.projects.totalCount,
-                      issuesCount: rep.issuesOpened.totalCount,
-                      labelsCount: rep.labelsCount?.totalCount,
-                      pullRequestsCount: rep.pullRequestsOpened.totalCount,
+                      id: node.id,
+                      name: node.name,
+                      projectsCount: node.projects.totalCount,
+                      issuesCount: node.issuesOpened.totalCount,
+                      labelsCount: node.labelsCount?.totalCount,
+                      pullRequestsCount: node.pullRequestsOpened.totalCount,
                       url: url,
                       owner: nil,
                       projects: projects,

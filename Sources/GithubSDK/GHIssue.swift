@@ -24,7 +24,7 @@ public class GHIssue: GHObject {
         super.init()
     }
     
-    convenience init?(issue: RepositoriesQuery.Data.Repository.Repository.Repository.Repository.IssuesOpened.Edge, totalCount: Int) {
+    convenience init?(issue: RepositoriesQuery.Data.User.Repository.Edge.Node.IssuesOpened.Edge, totalCount: Int) {
         if let node = issue.node {
             let createdAtDate = GHObject.date(from: node.createdAt)
             self.init(cursor: issue.cursor,

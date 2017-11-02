@@ -1,10 +1,10 @@
 query repositories($first: Int!, $after: String, $firstProjects: Int!, $firstIssues: Int!, $firstPullRequests: Int!) {
-  repositories: viewer {
-    repositories(first: $first, after: $after) {
+  user: viewer {
+    repositories: repositories(first: $first, after: $after) {
       totalCount
-      repositories: edges {
+      edges {
         cursor
-        repository: node {
+        node {
           name
           id
           url
