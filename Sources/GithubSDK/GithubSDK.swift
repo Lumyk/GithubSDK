@@ -12,6 +12,7 @@ public class GithubSDK: NSObject {
         var redirectUri: String
         var scopes: [String]
         
+        /// must be the same as in oauth app on github, it's important
         public init(clientId: String, clientSecret: String, redirectUri: String, scopes: [String]) {
             self.clientId = clientId
             self.clientSecret = clientSecret
