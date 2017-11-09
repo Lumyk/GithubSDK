@@ -42,6 +42,16 @@ public class GithubSDK: NSObject {
             return nil
         }
         
+        public func validateAccessTokenRequest(accessToken: String) -> URLRequest?  {
+            let auth = "\(self.clientId):\(self.clientSecret)"
+            if let authBase64 = auth.data(using: String.Encoding.utf8)?.base64EncodedString(), let url = URL(string: "https://api.github.com/applications/\(self.clientId)/tokens/\(accessToken)") {
+                var request = URLRequest(url: url)
+                request.addValue("Basic \(authBase64)", forHTTPHeaderField: "Authorization")
+                return request
+            }
+            return nil
+        }
+        
         func accessTokenURL() -> URL? {
             return URL(string: "https://github.com/login/oauth/access_token")
         }
@@ -51,6 +61,22 @@ public class GithubSDK: NSObject {
             data += "&client_secret=" + self.clientSecret
             data += "&code=" + code
             return data.data(using: .utf8)
+        }
+    }
+    
+    public func validateAccessToken(accessToken: String, oauth: Oauth, result: @escaping (_ isValid: Bool)->()) {
+        if let request = oauth.validateAccessTokenRequest(accessToken: accessToken) {
+            let configuration = URLSessionConfiguration.default
+            let session = URLSession(configuration: configuration)
+            session.dataTask(with: request, completionHandler: { (data, _, _) in
+                if let data = data, let dataString = String(data: data, encoding: String.Encoding.utf8), dataString.range(of: accessToken) != nil {
+                    result(true)
+                } else {
+                    result(false)
+                }
+            }).resume()
+        } else {
+            result(false)
         }
     }
     

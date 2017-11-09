@@ -28,9 +28,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func check(token: String) {
+        print("token -", token)
+        self.sdk.validateAccessToken(accessToken: token, oauth: self.oauth) { [weak self] (isValid) in
+            print("isValid", isValid)
+            self?.sdk.setup(accessToken: token)
+            self?.doIt()
+        }
+    }
+    
     func doIt() {
         self.sdk.usersInfo(complition: { (user, error) in
-            print(user)
+            print("usersInfo", user ?? "no user info")
         })
         
         self.sdk.userRepositories(first: 1, after: "Y3Vyc29yOnYyOpHOBiYSYg==", firstProjects: 3, firstIssues: 3, firstPullRequests: 3, complition: { (reposetiries, error) in
@@ -49,11 +59,9 @@ extension ViewController : UIWebViewDelegate {
         if let url = request.url {
             GithubSDK.handleAccessTokenURL(url: url, oauth: self.oauth, result: { [weak self] (token, error) in
                 if let token = token {
-                    print("token -", token)
-                    self?.sdk.setup(accessToken: token)
-                    self?.doIt()
+                    self?.check(token: token)
                 } else {
-                    print(token)
+                    print("error",error ?? "Unnown error")
                 }
             })
         }
